@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<input id="address" type="text" [(ngModel)]="myAddress" placeholder="Enter address here" />
+<button id="btn" (click)="clickSearchAddress()">Get LatLong</button>
+<input type="text" name="lat1" [value]="lat1" [(ngModel)]="lat1">
+<input type="text" name="lng1" [value]="lng1" [(ngModel)]="lng1">
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
